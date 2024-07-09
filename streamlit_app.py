@@ -44,5 +44,6 @@ if ingredients_list:
     time_to_insert = st.button('Submit_Order')
 
     if time_to_insert:
+        use warehouse COMPUTE_DW
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered, ' + name_on_order + '!', icon="✅")
